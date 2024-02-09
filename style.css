@@ -2,12 +2,99 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.fixed a {
+  display: flex;
+  gap: 50px;
+  position: relative;
+}
+
+.fixed-whatsapp,
+.fixed-instagram {
+  background-color: #5292e1;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  padding: auto;
+}
+
+.fixed-instagram a::after,
+.fixed-whatsapp a::after {
+  border: #5098E1 solid 3px;
+  border-radius: 9999px;
+  box-sizing: border-box;
+  content: ' ';
+  height: 180%;
+  left: -30%;
+  opacity: .8;
+  position: absolute;
+  top: -30%;
+  transform: scale(.714);
+  width: 160%;
+  z-index: 1;
+
+  animation: pulse 1.4s linear infinite;
+}
+
+.fixed-instagram a::before,
+.fixed-whatsapp a::before {
+  border: #5098E1 solid 3px;
+  border-radius: 9999px;
+  box-sizing: border-box;
+  content: ' ';
+  height: 180%;
+  left: -30%;
+  opacity: .8;
+  position: absolute;
+  top: -30%;
+  transform: scale(.714);
+  width: 160%;
+  z-index: 1;
+
+  animation: pulse .8s linear infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.714);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(0.714);
+  }
+}
+
+.fixed {
+  position: fixed;
+  top: 55%;
+  right: 0px;
+  transform: translate(0, -50%);
+  padding: 20px;
+  z-index: 1;
+}
+
+.fixed .ri-whatsapp-line,
+.fixed .ri-instagram-line {
+  font-size: 55px;
+  color: white;
+  margin-left: 7px;
+  margin-top: 5px;
+}
+
+.fixed-instagram {
+  margin-top: 30px;
 }
 
 .main {
@@ -241,6 +328,12 @@ center p {
   color: white;
 }
 
+.course a,
+.courseone a,
+.coursetwo a {
+  color: white;
+}
+
 .courseone {
   width: 200px;
   height: 100px;
@@ -316,6 +409,10 @@ center button {
   margin-left: -75px;
   font-style: italic;
   font-weight: 900;
+}
+
+.texts a {
+  color: white;
 }
 
 .supporttext {
@@ -476,16 +573,6 @@ iframe {
   margin-left: 195px;
 }
 
-.ourtext {
-  display: flex;
-  justify-content: center;
-  margin-top: 33px;
-  font-size: 20px;
-  color: #6199fb;
-  font-weight: 900;
-  font-style: italic;
-}
-
 .comments {
   margin-left: 20%;
   margin-top: 100px;
@@ -523,7 +610,7 @@ iframe {
   font-size: 25px;
 }
 
-.specialty{
+.specialty {
   margin-left: 34%;
   font-size: 15px;
   font-weight: 450;
@@ -531,7 +618,7 @@ iframe {
   margin-top: 8px;
 }
 
-.teacher-about{
+.teacher-about {
   background-image: linear-gradient(90.19deg, #5098E1 0.08%, #704DE3 99.76%);
   width: 100%;
   height: 1100px;
@@ -539,13 +626,14 @@ iframe {
   padding-top: 40px;
 }
 
-.teaching,  .teacher{
+.teaching,
+.teacher {
   display: flex;
   justify-content: center;
   color: white;
 }
 
-.teacher{
+.teacher {
   font-size: 25px;
   font-style: italic;
 }
@@ -570,7 +658,7 @@ iframe {
   margin-top: -20px;
 }
 
-.duty div li{
+.duty div li {
   margin-top: 25px;
   width: 700px;
 }
@@ -583,27 +671,34 @@ iframe {
   margin-left: -25px;
 }
 
-.ri-phone-fill, .ri-mail-line, .ri-linkedin-line, .ri-youtube-fill, .ri-instagram-line{
+.ri-phone-fill,
+.ri-mail-line,
+.ri-linkedin-line,
+.ri-youtube-fill,
+.ri-instagram-line {
   font-size: 35px;
 }
 
-.ri-linkedin-line{
+.ri-linkedin-line {
   margin-top: -10px;
 }
 
-.ri-youtube-fill, .ri-instagram-line{
+.ri-youtube-fill,
+.ri-instagram-line {
   margin-top: -5px;
 }
 
-.connection{
+.connection {
   margin-top: 35px;
 }
 
-.email-box{
+.email-box {
   margin-top: 30px;
 }
 
-.about-boxs div a, .about-one-box  a, .foto a {
+.about-boxs div a,
+.about-one-box a,
+.foto a {
   color: white;
   text-decoration: none;
   display: flex;
@@ -611,13 +706,13 @@ iframe {
   width: 230px;
 }
 
-.about-boxs{
+.about-boxs {
   display: flex;
   gap: 70px;
   margin-left: -30px;
 }
 
-.about-one-box{
+.about-one-box {
   display: flex;
   gap: 65px;
   margin-top: 40px;
@@ -629,11 +724,235 @@ iframe {
   gap: 15px;
 }
 
-.instagram{
+.instagram {
   margin-left: -23px;
 }
 
-.instagram-box{
+.instagram-box {
   display: flex;
   gap: 70px;
+  margin-top: 35px;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+.videos {
+  display: flex;
+  gap: 50px;
+  margin-top: 150px;
+  margin-left: 50px;
+}
+
+.videos iframe {
+  width: 450px;
+  height: 250px;
+}
+
+.ourtext {
+  font-size: 23px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  color: #6199fb;
+  font-style: italic;
+}
+
+.abuntext {
+  font-size: 27px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+}
+
+.the-media input {
+  font-size: 18px;
+  padding: 10px;
+  margin-top: 50px;
+  margin-left: 280px;
+  height: 40px;
+  width: 500px;
+  outline: none;
+}
+
+.subscribe {
+  display: flex;
+  gap: 30px;
+}
+
+.subscribe button {
+  height: 40px;
+  margin-top: 50px;
+  width: 100px;
+  background-color: #5098E1;
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding-top: -10px;
+}
+
+.the-end {
+  width: 100%;
+  height: 500px;
+  background-image: linear-gradient(90.19deg, #5098E1 0.08%, #704DE3 99.76%);
+  margin-top: 100px;
+  padding-top: 40px;
+  padding-left: 40px;
+  color: white;
+}
+
+.the-end-box {
+  display: flex;
+  gap: 130px;
+}
+
+.the-end-one-box div {
+  display: flex;
+  gap: 15px;
+}
+
+.the-end-one-box div img {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+}
+
+.the-end-one-box div p {
+  margin-top: 25px;
+  font-size: 31px;
+}
+
+.the-end-one-box p {
+  margin-top: 30px;
+  font-size: 20px;
+  width: 200px;
+  font-style: italic;
+}
+
+.kurs {
+  margin-top: 30px;
+}
+
+.kurs div {
+  margin-top: 60px;
+}
+
+.kurs a {
+  font-size: 20px;
+  font-style: italic;
+  color: white;
+}
+
+.menu {
+  margin-top: 30px;
+}
+
+.menu p {
+  font-size: 20px;
+  margin-top: 55px;
+}
+
+.the-end-Contact {
+  margin-top: 30px;
+}
+
+.the-end-Contact div {
+  margin-top: 55px;
+  display: flex;
+  gap: 25px;
+}
+
+.the-end-Contact div a {
+  color: white;
+  margin-top: -5px;
+  font-size: 20px;
+  width: 250px;
+}
+
+.ri-map-pin-line,
+.ri-mail-fill,
+.ri-smartphone-line {
+  font-size: 28px;
+}
+
+.ri-mail-fill,
+.ri-smartphone-line {
+  margin-top: -4px;
+}
+
+.end-box {
+  display: flex;
+  gap: 530px;
+}
+
+.end-two-box {
+  margin-top: 70px;
+  display: flex;
+  gap: 40px;
+}
+
+.ri-instagram-fill,
+.ri-linkedin-box-line {
+  font-size: 32px;
+}
+
+.end-two-box a {
+  color: white;
+}
+
+.endtext {
+  margin-top: 70px;
+}
+
+.tedristext {
+  color: #6199fb;
+}
+
+.hidden-course {
+  background-color: white;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 13px;
+  position: absolute;
+  top: 85px;
+  left: 415px;
+  border-radius: 15px;
+  display: none;
+}
+
+.digital-technology {
+  background-color: white;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 13px;
+  position: absolute;
+  top: 85px;
+  left: 54.5%;
+  border-radius: 15px;
+  display: none;
+}
+
+.hidden-course a:hover,
+.digital-technology a:hover {
+  color: #5098E1;
+  font-weight: 700;
+}
+
+.kurs div {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.teaching-teacher {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
 }
