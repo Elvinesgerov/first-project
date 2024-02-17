@@ -11,6 +11,94 @@ body {
   box-sizing: border-box;
 }
 
+.btn:hover{
+  background-color: #053e95;
+}
+
+.registration{
+  position: absolute;
+  background-color: white;
+  left: 30%;
+  top: 120px;
+  width: 800px;
+  height: 700px;
+  padding-left: 20px;
+  padding-top: 30px;
+  color: #5098E1;
+  font-weight: 900;
+  border-radius: 20px;
+  display: none;
+}
+
+.close div button {
+  margin-top: 40px;
+  margin-left: -20px;
+  width: 750px;
+  height: 45px;
+  color: white;
+  background-color: #00d68f;
+  border: #00d68f solid 3px;
+  border-radius: 20px;
+  font-size: 20px;
+  padding: auto;
+}
+
+.close div p {
+  margin-top: 40px;
+  margin-left: 150px;
+  color: #00d68f;
+  display: none;
+}
+
+.registration div{
+  margin-top: 25px;
+  font-size: 18px;
+  margin-left: 10px;
+  color: #5098E1;
+  font-weight: 900;
+}
+
+.registration select{
+  width: 350px;
+  height: 30px;
+  border: #5098E1 solid 3px;
+  outline: none;
+  padding-left: 10px;
+  font-size: 17px;
+  color: grey;
+  font-weight: 600;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-left: -10px;
+  font-style: italic;
+}
+
+.registration input{
+  width: 350px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 15px;
+  margin-left: -10px;
+  border: #5098E1 solid 3px;
+  outline: none;
+  padding-left: 15px;
+  font-size: 17px;
+  color: #5098E1;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.ri-close-line{
+  font-size: 36px;
+  margin-top: -25px;
+  margin-left: 46%;
+}
+
+::placeholder {
+  color: grey;
+  font-weight: 900;
+}
+
 .fixed a {
   display: flex;
   gap: 50px;
@@ -78,7 +166,7 @@ body {
 
 .fixed {
   position: fixed;
-  top: 55%;
+  top: 50%;
   right: 0px;
   transform: translate(0, -50%);
   padding: 20px;
@@ -99,7 +187,7 @@ body {
 
 .main {
   width: 100%;
-  height: 850px;
+  height: 900px;
   background-image: linear-gradient(90.19deg, #5098E1 0.08%, #704DE3 99.76%);
   color: white;
 }
@@ -290,18 +378,22 @@ body {
   margin-top: 40px;
 }
 
+.information button:hover {
+  background-color: #053e95;
+  color: white;
+}
+
 .animation {
   display: flex;
   gap: 50px;
-  margin-left: 45%;
-  margin-top: 20px;
+  margin-left: 43%;
+  margin-top: 50px;
 }
 
 .animation div {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: white;
 }
 
 center h1 {
@@ -319,13 +411,14 @@ center p {
 
 .course {
   width: 200px;
-  height: 100px;
+  height: 120px;
   background-image: linear-gradient(90.19deg, #5098E1 0.08%, #704DE3 99.76%);
   padding-left: 20px;
   padding-top: 10px;
   margin-left: 100px;
   margin-top: 70px;
   color: white;
+  border-radius: 20px;
 }
 
 .course a,
@@ -336,24 +429,26 @@ center p {
 
 .courseone {
   width: 200px;
-  height: 100px;
+  height: 120px;
   background-image: linear-gradient(90.19deg, #5098E1 0.08%, #704DE3 99.76%);
   padding-left: 20px;
   padding-top: 10px;
   margin-left: 50px;
   margin-top: 70px;
   color: white;
+  border-radius: 20px;
 }
 
 .coursetwo {
   width: 200px;
-  height: 100px;
+  height: 120px;
   background-image: linear-gradient(90.19deg, #5098E1 0.08%, #704DE3 99.76%);
   padding-left: 20px;
   padding-top: 10px;
   margin-left: 50px;
   margin-top: 70px;
   color: white;
+  border-radius: 20px;
 }
 
 
@@ -389,10 +484,20 @@ center button {
 .career {
   width: 100%;
   background-image: linear-gradient(90.19deg, #5098E1 0.08%, #704DE3 99.76%);
-  height: 830px;
+  height: 870px;
   margin-top: 50px;
   padding-top: 5px;
   color: white;
+}
+
+.career-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 13px;
+  color: white;
+}
+
+.internship-programs {
+  margin-left: -47px;
 }
 
 .cv-support {
@@ -413,6 +518,7 @@ center button {
 
 .texts a {
   color: white;
+  height: 50px;
 }
 
 .supporttext {
@@ -579,6 +685,7 @@ iframe {
   background-color: #f6f6f6;
   height: 360px;
   width: 70%;
+  border-radius: 20px;
 }
 
 .comments-boxs {
@@ -591,6 +698,7 @@ iframe {
   height: 250px;
   margin-left: 23px;
   margin-top: 30px;
+  border-radius: 20px;
 }
 
 .comments p {
@@ -669,6 +777,7 @@ iframe {
   height: 500px;
   margin-top: 10px;
   margin-left: -25px;
+  border-radius: 35px;
 }
 
 .ri-phone-fill,
@@ -746,6 +855,10 @@ a {
   margin-left: 50px;
 }
 
+iframe {
+  border-radius: 20px;
+}
+
 .videos iframe {
   width: 450px;
   height: 250px;
@@ -783,6 +896,10 @@ a {
   gap: 30px;
 }
 
+.subscribe input {
+  border-radius: 15px;
+}
+
 .subscribe button {
   height: 40px;
   margin-top: 50px;
@@ -792,6 +909,18 @@ a {
   border: none;
   font-size: 18px;
   padding-top: -10px;
+  border-radius: 15px;
+}
+
+.subscribe-message {
+  margin-top: 30px;
+  font-size: 25px;
+  margin-left: 28%;
+  font-weight: 900;
+  color: #5098E1;
+  font-style: italic;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: none;
 }
 
 .the-end {
@@ -955,4 +1084,163 @@ a {
   display: flex;
   flex-direction: column;
   gap: 35px;
+}
+
+.texts button:hover {
+  background-color: #053e95;
+  color: white;
+  margin-top: -10px;
+  height: 58px;
+}
+
+.ri-arrow-left-fill,
+.ri-arrow-right-fill,
+.ri-home-2-line {
+  font-size: 35px;
+}
+
+.ri-home-2-line {
+  color: #053e95;
+  font-weight: 900;
+}
+
+.animation-one,
+.animation-three {
+  background-color: white;
+  font-weight: 900;
+}
+
+.animation-two {
+  background-color: #053e95;
+  font-weight: 900;
+}
+
+.translator {
+  display: flex;
+  gap: 35px;
+  margin-left: 42.5%;
+}
+
+.editor {
+  display: flex;
+  font-size: 40px;
+  gap: 60px;
+  margin-top: 50px;
+  margin-left: 45%;
+  font-weight: 900;
+}
+
+.ri-corner-up-left-fill,
+.ri-corner-up-right-line {
+  color: #5292e1;
+}
+
+.mouse{
+  font-size: 50px;
+  font-weight: 500;
+  position: fixed;
+  top: 13%;
+  right: 15px;
+  transform: translate(0, -50%);
+  z-index: 1;
+  background-color: #053e95;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  padding-left: 8.5px;
+  padding-top: 5px;
+}
+
+.mouse-up{
+  font-size: 50px;
+  font-weight: 500;
+  position: fixed;
+  top: 88%;
+  right: 15px;
+  transform: translate(0, -50%);
+  z-index: 1;
+  background-color: #053e95;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  padding-left: 8.5px;
+  padding-top: 5px;
+}
+
+.ri-arrow-up-s-line, .ri-arrow-down-s-line {
+  color: white;
+}
+
+.mouse a, .mouse-up a {
+  position: relative;
+}
+
+.mouse a::after, .mouse-up a::after {
+  border: #053e95 solid 3.5px;
+  border-radius: 9999px;
+  box-sizing: border-box;
+  content: ' ';
+  height: 180%;
+  left: -50%;
+  opacity: .8;
+  position: absolute;
+  top: -40%;
+  transform: scale(.714);
+  width: 201%;
+  z-index: 1;
+
+  animation: pulse 1.4s linear infinite;
+}
+
+.mouse a:hover::after, .mouse-up a:hover::after{
+  border: #5098E1 solid 3.5px;
+}
+
+.mouse a:hover::before, .mouse-up a:hover::before{
+  border: #5098E1 solid 3.5px;
+}
+
+.mouse a::before, .mouse-up a::before {
+  border: #053e95 solid 3.5px;
+  border-radius: 9999px;
+  box-sizing: border-box;
+  content: ' ';
+  height: 180%;
+  left: -50%;
+  opacity: .8;
+  position: absolute;
+  top: -40%;
+  transform: scale(.714);
+  width: 203%;
+  z-index: 1;
+
+  animation: pulse .8s linear infinite;
+}
+
+.mouse:hover, .mouse-up:hover{
+  background-color: #5292e1;
+}
+
+.fixed-whatsapp:hover, .fixed-instagram:hover{
+  background-color:#053e95 ;
+}
+
+.fixed-instagram a:hover::after{
+  border: #053e95 solid 3.5px;
+}
+
+.fixed-whatsapp a:hover::after{
+  border: #053e95 solid 3.5px;
+}
+
+.fixed-whatsapp a:hover::before{
+  border: #053e95 solid 3.5px;
+}
+
+.fixed-instagram a:hover::before{
+  border: #053e95 solid 3.5px;
+}
+
+.fixed-instagram a:hover::before{
+  border: #053e95 solid 3.5px;
 }

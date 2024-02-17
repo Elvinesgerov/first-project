@@ -14,15 +14,60 @@
 
 <body>
 
+    <div class="registration">
+        <i class="ri-close-line"></i>
+        <div class="close">
+            <h2>Sizinlə əlaqəyə keçməyimiz üçün məlumatlarınızı daxil edin:</h2>
+            <div>
+                <label for="" class="nameSurname">Ad, Soyad</label>
+                <br>
+                <input type="text" placeholder="Daxil edin!" required>
+                <br>
+                <br>
+                <br>
+                <label for="" class="nameSurname">E-poçt</label>
+                <br>
+                <input type="email" placeholder="Daxil edin!" required>
+                <br>
+                <br>
+                <br>
+                <label for="">Telefon</label>
+                <br>
+                <input type="email" placeholder="Daxil edin!" required>
+                <br>
+                <br>
+                <br>
+                <label for="">Kurs</label>
+                <br>
+                <select name="" id="course">
+                    <option value="sebeke">Şəbəkə</option>
+                    <option value="sistem">Sistem İnzibatçılığı</option>
+                    <option value="heldesk">İT Helpdesk</option>
+                </select>
+                <br>
+                <button>Göndər</button>
+                <p>Müraciətiniz Qebul Olundu ! Tezliklə geri dönüş olacaq.</p>
+            </div>
+        </div>
+    </div>
+
     <div class="hidden-course">
         <a href="">IT HelpDesk</a>
         <a href="">Şəbəkə</a>
-        <a href="">Sistem Administratoru</a>
+        <a href="">Sistem Inzibatçılığı</a>
     </div>
 
     <div class="digital-technology">
         <a href="">Haqqımızda</a>
         <a href="">Suallar</a>
+    </div>
+
+    <div class="mouse">
+        <a href="#slm"><i class="ri-arrow-up-s-line"></i></a>
+    </div>
+
+    <div class="mouse-up">
+        <a href="#slm-one"><i class="ri-arrow-down-s-line"></i></a>
     </div>
 
     <div class="fixed">
@@ -44,25 +89,25 @@
             <i class="ri-triangle-line"></i>
             <i class="ri-square-line"></i>
 
-            <div class="logo">
+            <div class="logo" id="slm">
                 <img src="./foto/logo.jpg" alt="">
                 <p>DTEC</p>
             </div>
 
             <div class="texts">
                 <a href="" class="course-text">Kurslar</a>
-                <a href="">Karyera Dəstəyi</a>
-                <a href="https://www.youtube.com/@ResadSirinli" target="_blank">Resurslar</a>
+                <a href="" class="career-link">Karyera Dəstəyi</a>
+                <a href="https://www.youtube.com/@ResadSirinli" target="_blank" class="career-link">Resurslar</a>
                 <i class="ri-magic-line"></i>
                 <a href="" class="education-center">Digital Technology Education Center</a>
-                <a href="">Əlaqə</a>
+                <a href="" class="career-link">Əlaqə</a>
 
-                <select>
-                    <option value="">Az</option>
-                    <option value="">Eng</option>
+                <select class="language">
+                    <option value="az">Az</option>
+                    <option value="en">En</option>
                 </select>
 
-                <button>Müraciət et</button>
+                <button id="registr">Müraciət et</button>
             </div>
 
             <i class="ri-circle-line"></i>
@@ -80,25 +125,31 @@
                     Active Directory vasitəsilə giriş daxil olmaqla, şəbəkə daxilində istifadəçiləri necə idarə etməyi
                     öyrənmək çox vacibdir.</p>
 
-                <button>Müraciət et</button>
+                <button id="registr">Müraciət et</button>
             </div>
 
             <img src="./foto/IT support.png" alt="">
 
         </div>
 
+        <div class="translator">
+            <i class="ri-arrow-left-fill"></i>
+            <i class="ri-home-2-line"></i>
+            <i class="ri-arrow-right-fill"></i>
+        </div>
+
         <div class="animation">
 
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="animation-one"></div>
+            <div class="animation-two"></div>
+            <div class="animation-three"></div>
 
         </div>
 
     </div>
 
     <center>
-        <h1 data-aos="fade-up" data-aos-duration="2000">Kurslarımız</h1>
+        <h1 class="our-courses" data-aos="fade-up" data-aos-duration="2000">Kurslarımız</h1>
         <p class="tedristext" data-aos="fade-up" data-aos-duration="2000">Tədris etdiyimiz kurslar</p>
     </center>
 
@@ -140,7 +191,8 @@
     </div>
 
     <center>
-        <button data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">indi müraciət et</button>
+        <button id="registr" class="btn" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">indi müraciət
+            et</button>
     </center>
 
     <div class="career">
@@ -156,24 +208,21 @@
                 <i class="ri-file-text-line"></i>
                 <h4>CV hazırlanmasına dəstək</h4>
                 <p class="supporttext">IT muhəndisinin, CV-si necə olur? Məzun olanda sənə də hazırlayacağıq. Çünki
-                    hazırladığımız CV-lərlə
-                    məzunlarımız yerli və qlobal şirkətlərdə çalışır.</p>
+                    hazırladığımız CV-lərləməzunlarımız yerli və qlobal şirkətlərdə çalışır.</p>
             </div>
 
             <div data-aos="fade-down" data-aos-duration="2000">
                 <i class="ri-phone-line"></i>
                 <h4>İşə götürənlərlə əlaqələr</h4>
                 <p class="supporttext">Yerli və xarici şirkətlər, dövlət qurumları, startaplarla sıx əlaqələr quraraq iş
-                    tapma imkanını
-                    asanlaşdırırıq.</p>
+                    tapma imkanını asanlaşdırırıq.</p>
             </div>
 
             <div data-aos="fade-left" data-aos-duration="2000">
                 <i class="ri-briefcase-4-line"></i>
                 <h4>Karyera bələdçisi</h4>
                 <p class="supporttext">Karyera bələdçisi kurs müddətində daim yanında olur, səni istiqamətləndirir və
-                    uğurlu karyeraya
-                    hazırlayır.</p>
+                    uğurlu karyeraya hazırlayır.</p>
             </div>
 
         </div>
@@ -184,24 +233,21 @@
                 <i class="ri-global-line"></i>
                 <h4>Müsahibəyə hazırlıq təlimi</h4>
                 <p class="supporttext1">Bu təlimdə real təcrübələri səninlə bölüşəcək, səni gözləyən sual və
-                    tapşırıqlardan xəbərdar edəcək
-                    və müsahibəyə tam hazırlayacağıq.</p>
+                    tapşırıqlardan xəbərdar edəcək və müsahibəyə tam hazırlayacağıq.</p>
             </div>
 
-            <div data-aos="fade-down" data-aos-duration="2000">
+            <div data-aos="fade-down" data-aos-duration="2000" class="internship-programs">
                 <i class="ri-computer-line"></i>
                 <h4>Təcrübə proqramları</h4>
                 <p class="supporttext">Bütün iş elanlarında təcrübə tələb olunur. Təcrübə proqramını isə uğurla məzun
-                    olduqdan sonra biz
-                    təmin edəcəyik!</p>
+                    olduqdan sonra biz təmin edəcəyik!</p>
             </div>
 
             <div data-aos="fade-left" data-aos-duration="2000">
                 <i class="ri-chat-2-line"></i>
                 <h4>Tövsiyə məktubu</h4>
                 <p class="supporttext">Digital Technology Education center -dən uğurla məzun olduqda Akademiyamız
-                    adından yazdığımız tövsiyə məktubu işə qəbul
-                    prosesində köməyinə çatır.</p>
+                    adından yazdığımız tövsiyə məktubu işə qəbul prosesində köməyinə çatır.</p>
             </div>
 
         </div>
@@ -212,7 +258,7 @@
 
         <div data-aos="fade-right" data-aos-duration="2000">
             <h1>Gələcəyini bu gün inşa et!</h1>
-            <p>Digital Technology Education Center </p>
+            <p>Digital Technology Education Center</p>
         </div>
 
         <iframe data-aos="fade-left" data-aos-duration="2000" width="560" height="315"
@@ -250,8 +296,7 @@
                 <i class="ri-git-branch-line"></i>
                 <h3 class="information-first-two">Karyera dəstəyi</h3>
                 <p>Uğurlu karyera üçün zəruri bilik və bacarıqlara yiyələnməlisən. Peşəkar komandamız bu yolda sənə
-                    kömək edəcək. Biznes əlaqələrimiz isə iş həyatına tez başlamağın üçün imkan yaradacaq.
-                </p>
+                    kömək edəcək. Biznes əlaqələrimiz isə iş həyatına tez başlamağın üçün imkan yaradacaq.</p>
             </div>
 
         </div>
@@ -262,23 +307,21 @@
                 <i class="ri-openai-fill"></i>
                 <h3 class="information-last">Ödənişsiz sınaq dərsi</h3>
                 <p>Yüz eşitməkdənsə, bir görmək yaxşıdır. Ödənişsiz sınaq dərsimiz sənə qərar verməkdə kömək edir.
-                    Dərslərdə iştirak edib, suallarına mütəxəssislərimizin köməyi ilə cavab tapa bilərsən.
-                </p>
+                    Dərslərdə iştirak edib, suallarına mütəxəssislərimizin köməyi ilə cavab tapa bilərsən.</p>
             </div>
 
             <div class="information-boxes-three" data-aos="fade-down" data-aos-duration="2000">
                 <i class="ri-microsoft-fill"></i>
                 <h3 class="information-last-one">Tədris formatında seçim</h3>
                 <p>Təlim prosesində həm əyani, həm də distant formada iştirak edə bilərsən. İstər əyani, istərsə də
-                    istədiyin məkandan distant formada qoşulduğun dərslər eyni proqram əsasında tədris olunur.
-                </p>
+                    istədiyin məkandan distant formada qoşulduğun dərslər eyni proqram əsasında tədris olunur.</p>
             </div>
 
             <div class="information-boxes-one" data-aos="fade-left" data-aos-duration="2000">
                 <i class="ri-user-line"></i>
                 <h3 class="information-last-three">Mentor dəstəyi</h3>
                 <p>Öyrənmə prosesini asanlaşdırmaq üçün mentorlarımız daima yanında olur. Onlar öyrənmə prosesində
-                    rahatlıqla suallarını verib, qısa zamanda cavab ala biləcəyin əlçatan bələdçilərdir.p>
+                    rahatlıqla suallarını verib, qısa zamanda cavab ala biləcəyin əlçatan bələdçilərdir.</p>
             </div>
 
         </div>
@@ -288,7 +331,7 @@
     <div>
 
         <center>
-            <h1 data-aos="fade-up" data-aos-duration="2000">Məzunlarımız</h1>
+            <h1 class="header" data-aos="fade-up" data-aos-duration="2000">Məzunlarımız</h1>
         </center>
 
         <p class="ourtext" data-aos="fade-up" data-aos-duration="2000">Bizdən bəhs edirlər</p>
@@ -296,29 +339,31 @@
         <div class="comments" data-aos="fade-down" data-aos-duration="2000">
 
             <div class="comments-boxs">
-                <img src="./foto/girl foto.jpg" alt="">
+                <img src="./foto/arif muradov.jpg" alt="">
                 <i class="ri-double-quotes-l"></i>
                 <p>Təhsil strategiyasının əsas məqsədlərindən biri qlobal bazarda rəqabət apara biləcək kadrlar
                     hazırlamaqdır. "Digital Technology Education Center" bunu nəzərə alaraq Azərbaycanda və xaricdə bu
-                    sahə üzrə karyera qurmaq
-                    istəyənlərin potensialını dəyərləndirərək, fərdi və peşəkar inkişafları üçün onları zəruri bilik və
-                    praktiki vərdişlərlə təmin edir. İnsanlara yeni karyera qurmaq üçün lazım olan texnoloji bacarıqları
-                    interaktiv texnologiyadan istifadə edərək öyrədir. Mən də "Digital Technology Education Center"-nin
-                    bir parçası olaraq kursun
-                    yüksək səviyyəli təhsil imkanlarından yararlandım. Bunun mənim gələcəkdəki kayera planlarıma bir
-                    müsbət
-                    olaraq yansıyacağına əminəm. Bizə bu şəraiti yaradan rəhbərliyə, iş kollektivinə minnətdarlığımı
-                    bildirmək istərdim. Bu kursu daha yaxsi "IT Help Desk " mütəxəsisi olmaq isteyen hər kəsə tövsiyə
-                    edirəm. Hər kəsin
-                    İT öyrənməyi və yaxşı bir İT mütəxəsisi ola biləcəyini unutmayın. Yalnız bunu edə biləcəyinizə
-                    inanın!</p>
+                    sahə üzrə karyera qurmaq istəyənlərin potensialını dəyərləndirərək, fərdi və peşəkar inkişafları
+                    üçün onları zəruri bilik və praktiki vərdişlərlə təmin edir. İnsanlara yeni karyera qurmaq üçün
+                    lazım olan texnoloji bacarıqları interaktiv texnologiyadan istifadə edərək öyrədir. Mən də "Digital
+                    Technology Education Center"-nin bir parçası olaraq kursun yüksək səviyyəli təhsil imkanlarından
+                    yararlandım. Bunun mənim gələcəkdəki kayera planlarıma bir müsbət olaraq yansıyacağına əminəm. Bizə
+                    bu şəraiti yaradan rəhbərliyə, iş kollektivinə minnətdarlığımı bildirmək istərdim. Bu kursu daha
+                    yaxsi "IT Help Desk " mütəxəsisi olmaq isteyen hər kəsə tövsiyə edirəm. Hər kəsin İT öyrənməyi və
+                    yaxşı bir İT mütəxəsisi ola biləcəyini unutmayın. Yalnız bunu edə biləcəyinizə inanın!</p>
             </div>
 
-            <h6 class="name">İhsan Büyükugur</h6>
+            <h6 class="name">Arif Muradov</h6>
             <h6 class="specialty">IT Support</h6>
 
         </div>
 
+    </div>
+
+    <div class="editor">
+        <i class="ri-corner-up-left-fill"></i>
+        <i class="ri-home-4-line"></i>
+        <i class="ri-corner-up-right-line"></i>
     </div>
     <div class="teacher-about">
 
@@ -329,47 +374,33 @@
 
         <div class="duty">
 
-            <h2 data-aos="fade-right" data-aos-duration="2000">Əsas Vəzifələri</h2>
+            <h2 class="main-duties" data-aos="fade-right" data-aos-duration="2000">Əsas Vəzifələri</h2>
+
             <div class="boxs-ul">
 
                 <ul>
                     <li data-aos="fade-up" data-aos-duration="2000">Son istifadəçilərə operativ və effektiv texniki
-                        yardımın
-                        göstərilməsi, aparat, proqram təminatı və şəbəkə ilə bağlı
-                        məsələlərin həlli.</li>
+                        yardımın göstərilməsi, aparat, proqram təminatı və şəbəkə ilə bağlı məsələlərin həlli.</li>
                     <li data-aos="fade-up" data-aos-duration="2000">Boş vaxtları minimuma endirmək və xidmətləri
-                        səmərəli
-                        şəkildə bərpa etmək üçün mürəkkəb texniki problemlərin
-                        diaqnostikası və həlli.</li>
+                        səmərəli şəkildə bərpa etmək üçün mürəkkəb texniki problemlərin diaqnostikası və həlli.</li>
                     <li data-aos="fade-up" data-aos-duration="2000">Periferik qurğuların konfiqurasiyası ilə yanaşı,
-                        kompüter
-                        quraşdırma, təkmilləşdirmə və təmir işlərini yerinə yetirmək.</li>
+                        kompüter quraşdırma, təkmilləşdirmə və təmir işlərini yerinə yetirmək.</li>
                     <li data-aos="fade-up" data-aos-duration="2000">Funksionallığı optimallaşdırmaq üçün proqram
-                        proqramlarının
-                        quraşdırılması, yenilənməsi və konfiqurasiyası.
-                    </li>
+                        proqramlarının quraşdırılması, yenilənməsi və konfiqurasiyası.</li>
                     <li data-aos="fade-up" data-aos-duration="2000">İstifadəçi hesablarını, giriş icazələrini və
-                        təhlükəsizlik
-                        konfiqurasiyalarını idarə etmək.</li>
+                        təhlükəsizlik konfiqurasiyalarını idarə etmək.</li>
                     <li data-aos="fade-up" data-aos-duration="2000">Uzaqdan iş masası alətlərindən istifadə edərək
-                        uzaqdan
-                        texniki yardımın göstərilməsi.
-                    </li>
+                        uzaqdan texniki yardımın göstərilməsi.</li>
                     <li data-aos="fade-up" data-aos-duration="2000">Bilik bazasını saxlamaq üçün dəstək fəaliyyətlərinin
-                        və
-                        həllərin sənədləşdirilməsi.
-                    </li>
+                        və həllərin sənədləşdirilməsi.</li>
                     <li data-aos="fade-up" data-aos-duration="2000">Mürəkkəb problemləri artırmaq və vaxtında həllini
-                        təmin
-                        etmək üçün İT komandaları ilə əməkdaşlıq etmək.
-                    </li>
+                        təmin etmək üçün İT komandaları ilə əməkdaşlıq etmək.</li>
                     <li data-aos="fade-up" data-aos-duration="2000">Rutin sistem yoxlamalarının və profilaktik təmirin
                         aparılması.</li>
                     <li data-aos="fade-up" data-aos-duration="2000">İstifadəçilərin dəstək sorğularının statusu haqqında
                         məlumatlandırılması.</li>
                     <li data-aos="fade-up" data-aos-duration="2000">Peşəkar və səmimi qarşılıqlı əlaqə vasitəsilə yüksək
-                        müştəri
-                        məmnuniyyətinin təmin edilməsi.</li>
+                        müştəri məmnuniyyətinin təmin edilməsi.</li>
                 </ul>
 
                 <div class="foto">
@@ -451,6 +482,7 @@
             <input type="email" placeholder="Emailinizi daxil edin">
             <button>Abunə ol</button>
         </div>
+        <p class="subscribe-message">Uğurla Abunə Olundu!</p>
 
     </div>
 
@@ -465,9 +497,8 @@
                     <p>DTEC</p>
                 </div>
 
-                <p>Digital Technology Education Center, məqsədi peşəkar "It mütəxəssisi (IT Helpdesk, Şəbəkə, Sistem
-                    administratoru )" olmaq istəyənlərin ünvanı!
-                </p>
+                <p class="about-dtec">Digital Technology Education Center, məqsədi peşəkar "It mütəxəssisi (IT Helpdesk,
+                    Şəbəkə, Sistem administratoru )" olmaq istəyənlərin ünvanı!</p>
 
             </div>
 
@@ -514,7 +545,7 @@
 
         </div>
 
-        <div class="end-box">
+        <div class="end-box" id="slm-one">
 
             <div class="end-one-box">
                 <p class="endtext">© Digital Technology Education Center 2024, Bütün hüquqlar qorunur !</p>
