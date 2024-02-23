@@ -34,6 +34,8 @@ let closeP = document.querySelector(".close div p")
 let closeH2 = document.querySelector(".close h2")
 let label = document.querySelectorAll("label")
 let courseID = document.querySelectorAll("#course option")
+let mouse = document.querySelector(".mouse")
+let mouseUp = document.querySelector(".mouse-up")
 
 let flag = true;
 let flag1 = true;
@@ -41,6 +43,27 @@ let flag2 = true;
 let flag3 = true;
 let flag4 = true;
 let flag5 = true;
+
+window.onscroll = function() {
+    let goToTopButton = document.getElementById('goToTopButton');
+
+    if (window.scrollY > 1000) {
+        goToTopButton.style.display = 'block';
+    } else {
+        goToTopButton.style.display = 'none';
+    }
+};
+
+function goToTop() {
+    let currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+    if (currentScroll > 0) {
+        window.scrollTo(0, currentScroll - 30);
+        setTimeout(goToTop, 10);
+    }
+}
+
+
 
 closeInput.forEach(item => {
     closeButton.addEventListener("click", () => {
@@ -56,6 +79,72 @@ closeInput.forEach(item => {
 registr.forEach(item => {
     item.addEventListener("click", () => {
         registration.style.display = "block"
+
+        select.addEventListener("click", () => {
+            if (select.value == "en") {
+                closeH2.innerText = "Enter your details so we can contact you:"
+                label.forEach(item => {
+                    if (item.innerText == "Ad, Soyad") {
+                        item.innerText = "First name, last name"
+                    } else if (item.innerText == "E-poçt") {
+                        item.innerText = "E-mail"
+                    } else if (item.innerText == "Telefon") {
+                        item.innerText = "Phone"
+                    } else if (item.innerText == "Kurs") {
+                        item.innerText = "Course"
+                    }
+                })
+
+                closeInput.forEach(item => {
+                    item.placeholder = "Insert"
+                })
+
+                courseID.forEach(item => {
+                    if (item.innerText == "Şəbəkə") {
+                        item.innerText = "Network"
+                    } else if (item.innerText == "Sistem İnzibatçılığı") {
+                        item.innerText = "System Administration"
+                    } else if (item.innerText == "İT Helpdesk") {
+                        item.innerText = "IT Helpdesk"
+                    }
+                })
+                closeButton.innerText = "Send"
+                closeP.innerText = "Your application has been accepted! There will be a comeback soon."
+                closeP.style.marginLeft = "93px"
+            } else if (select.value == "az") {
+                closeH2.innerText = "Sizinlə əlaqəyə keçməyimiz üçün məlumatlarınızı daxil edin:"
+                label.forEach(item => {
+                    if (item.innerText == "First name, last name") {
+                        item.innerText = "Ad, Soyad"
+                    } else if (item.innerText == "E-mail") {
+                        item.innerText = "E-poçt"
+                    } else if (item.innerText == "Phone") {
+                        item.innerText = "Telefon"
+                    } else if (item.innerText == "Course") {
+                        item.innerText = "Kurs"
+                    }
+                })
+
+                closeInput.forEach(item => {
+                    item.placeholder = "Daxil olun"
+                })
+
+                courseID.forEach(item => {
+                    if (item.innerText == "Network") {
+                        item.innerText = "Şəbəkə"
+                    } else if (item.innerText == "System Administration") {
+                        item.innerText = "Sistem İnzibatçılığı"
+                    } else if (item.innerText == "İT Helpdesk") {
+                        item.innerText = "IT Helpdesk"
+                    }
+                })
+
+                closeButton.innerText = "Göndər"
+                closeP.innerText = "Müraciətiniz qəbul edildi! Tezliklə geri dönüş olacaq."
+                closeP.style.marginLeft = "93px"
+            }
+
+        })
 
         close1.addEventListener('click', () => {
             registration.style.display = "none"
@@ -79,17 +168,48 @@ registr.forEach(item => {
                 item.placeholder = "Insert"
             })
 
-            courseID.forEach(item=>{
-                if(item.innerText == "Şəbəkə"){
+            courseID.forEach(item => {
+                if (item.innerText == "Şəbəkə") {
                     item.innerText = "Network"
-                } else if (item.innerText == "Sistem İnzibatçılığı"){
+                } else if (item.innerText == "Sistem İnzibatçılığı") {
                     item.innerText = "System Administration"
-                } else if (item.innerText == "İT Helpdesk"){
+                } else if (item.innerText == "İT Helpdesk") {
                     item.innerText = "IT Helpdesk"
                 }
             })
             closeButton.innerText = "Send"
             closeP.innerText = "Your application has been accepted! There will be a comeback soon."
+            closeP.style.marginLeft = "93px"
+        } else if (select.value == "az") {
+            closeH2.innerText = "Sizinlə əlaqəyə keçməyimiz üçün məlumatlarınızı daxil edin:"
+            label.forEach(item => {
+                if (item.innerText == "First name, last name") {
+                    item.innerText = "Ad, Soyad"
+                } else if (item.innerText == "E-mail") {
+                    item.innerText = "E-poçt"
+                } else if (item.innerText == "Phone") {
+                    item.innerText = "Telefon"
+                } else if (item.innerText == "Course") {
+                    item.innerText = "Kurs"
+                }
+            })
+
+            closeInput.forEach(item => {
+                item.placeholder = "Daxil olun"
+            })
+
+            courseID.forEach(item => {
+                if (item.innerText == "Network") {
+                    item.innerText = "Şəbəkə"
+                } else if (item.innerText == "System Administration") {
+                    item.innerText = "Sistem İnzibatçılığı"
+                } else if (item.innerText == "İT Helpdesk") {
+                    item.innerText = "IT Helpdesk"
+                }
+            })
+
+            closeButton.innerText = "Göndər"
+            closeP.innerText = "Müraciətiniz qəbul edildi! Tezliklə geri dönüş olacaq."
             closeP.style.marginLeft = "93px"
         }
     })
@@ -1542,8 +1662,8 @@ home.addEventListener("click", () => {
         translator.style.marginTop = "-70px"
     } else if (select.value == "en") {
         informationH1.innerHTML = "Only 6 months you will specialize IT HelpDesk course"
-        informationP.innerText = "A person responsible for the management and operation of a multi-user computing system, communications system, or both. The system administrator is responsible for assigning user IDs and passwords, setting their access levels, and allocating storage space."
-        translator.style.marginTop = "5px"
+        informationP.innerText = "Becoming an IT specialist requires starting from the basics. You must familiarize yourself with everything related to computers and information technologies: understanding how they work, installing operating systems like Windows on machines, facilitating their communication, managing them effectively, and solving hardware-related problems. Additionally, it is essential to learn how to manage users within the network by logging in via accounts, permissions, passwords, and Active Directory."
+        translator.style.marginTop = "-45px"
         main.style.height = "905px"
     }
 
@@ -1792,7 +1912,7 @@ home.addEventListener("click", () => {
             document.querySelector(".main h1").innerText = "Cəmi 6 aya ixtisaslaşacağın IT HelpDesk kursu"
             informationP.innerText = "İT mütəxəssisi olmaq əsaslardan başlamağı tələb edir. Siz kompüterləri və informasiya texnologiyaları ilə əlaqəli hər şeyi mənimsəməlisiniz: onların necə işlədiyini anlamaq, Windows kimi əməliyyat sistemlərini maşınlara quraşdırmaq, onların ünsiyyətini asanlaşdırmaq, onları effektiv idarə etmək və aparatla bağlı problemləri həll etmək. Eyni zamanda, istifadəçi hesabları, icazələr, parollar və Active Directory vasitəsilə giriş daxil olmaqla, şəbəkə daxilində istifadəçiləri necə idarə etməyi öyrənmək çox vacibdir."
             animation.style.marginTop = "50px"
-            translator.style.marginTop = "150px"
+            translator.style.marginTop = "-20px"
             subscribeMessage.innerText = "Uğurla abunə olundu!"
             document.querySelectorAll('.hidden-course a').forEach(function (element) {
                 if (element.innerText == 'IT HelpDesk') {
@@ -2272,10 +2392,10 @@ left.addEventListener("click", () => {
             });
             flag2 = false
         } else if (select.value == "az" && flag2 == false) {
-            document.querySelector(".main h1").innerText = "Cəmi 6 aya ixtisaslaşacağın Şəbəkə kursu"
-            informationP.innerText = "Şəbəkə sadəcə cihazların bir-birilə əlaqə qurması və müəyyən edilmiş məlumatların paylaşılması deməkdir.Bunlar kompüterlər (PC),Server-lər,router-lər və s. ola bilər.Ən böyük şəbəkəyə İnterneti , ən kiçik şəbəkəyə isə iki kompüterin bir-birinə bağlanmasını nümunə göstərə bilərik."
+            document.querySelector(".main h1").innerText = "Cəmi 6 aya ixtisaslaşacağın Sistem Inzibatçılığı kursu"
+            informationP.innerText = "Çox istifadəçi hesablama sisteminin, rabitə sisteminin, yaxud onların hər ikisinin idarə olunması və istifadəsinə cavabdeh olan şəxs. Sistem inzibatçısı istifadəçilərə kimlik nömrələri (identifikatorlar) və parollar vermək, onların əlçatanlıq səviyyələrini qurmaq və yaddaş həcmini bölüşdürmək kimi səlahiyyətləri yerinə yetirir."
             animation.style.marginTop = "50px"
-            translator.style.marginTop = "150px"
+            translator.style.marginTop = "-12px"
             subscribeMessage.innerText = "ugurla abunə olundu!"
 
 

@@ -109,8 +109,8 @@ body {
 .fixed-instagram {
   background-color: #5292e1;
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   padding: auto;
 }
 
@@ -120,7 +120,7 @@ body {
   border-radius: 9999px;
   box-sizing: border-box;
   content: ' ';
-  height: 180%;
+  height: 175%;
   left: -30%;
   opacity: .8;
   position: absolute;
@@ -138,7 +138,7 @@ body {
   border-radius: 9999px;
   box-sizing: border-box;
   content: ' ';
-  height: 180%;
+  height: 175%;
   left: -30%;
   opacity: .8;
   position: absolute;
@@ -175,10 +175,10 @@ body {
 
 .fixed .ri-whatsapp-line,
 .fixed .ri-instagram-line {
-  font-size: 55px;
+  font-size: 48px;
   color: white;
-  margin-left: 7px;
-  margin-top: 5px;
+  margin-left: 8.5px;
+  margin-top: 8px;
 }
 
 .fixed-instagram {
@@ -935,7 +935,7 @@ iframe {
 
 .the-end-box {
   display: flex;
-  gap: 130px;
+  gap: 95px;
 }
 
 .the-end-one-box div {
@@ -956,8 +956,8 @@ iframe {
 
 .the-end-one-box p {
   margin-top: 30px;
-  font-size: 20px;
-  width: 200px;
+  font-size: 22px;
+  width: 300px;
   font-style: italic;
 }
 
@@ -1145,10 +1145,11 @@ iframe {
   z-index: 1;
   background-color: #053e95;
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   padding-left: 8.5px;
-  padding-top: 5px;
+  padding-top: 2px;
+  display: none;
 }
 
 .mouse-up{
@@ -1161,14 +1162,15 @@ iframe {
   z-index: 1;
   background-color: #053e95;
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   padding-left: 8.5px;
   padding-top: 5px;
 }
 
 .ri-arrow-up-s-line, .ri-arrow-down-s-line {
   color: white;
+  margin-left: -2px;
 }
 
 .mouse a, .mouse-up a {
@@ -1180,7 +1182,7 @@ iframe {
   border-radius: 9999px;
   box-sizing: border-box;
   content: ' ';
-  height: 180%;
+  height: 175%;
   left: -50%;
   opacity: .8;
   position: absolute;
@@ -1205,7 +1207,7 @@ iframe {
   border-radius: 9999px;
   box-sizing: border-box;
   content: ' ';
-  height: 180%;
+  height: 175%;
   left: -50%;
   opacity: .8;
   position: absolute;
