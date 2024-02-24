@@ -34,8 +34,10 @@ let closeP = document.querySelector(".close div p")
 let closeH2 = document.querySelector(".close h2")
 let label = document.querySelectorAll("label")
 let courseID = document.querySelectorAll("#course option")
-let mouse = document.querySelector(".mouse")
-let mouseUp = document.querySelector(".mouse-up")
+let fixedWhatsappOne = document.querySelector(".fixed-whatsapp-one")
+let fixedInstagramOne = document.querySelector(".fixed-instagram-one")
+let fixedWhatsappOneP = document.querySelector(".fixed-whatsapp-one p")
+let fixedInstagramOneP = document.querySelector(".fixed-instagram-one p")
 
 let flag = true;
 let flag1 = true;
@@ -44,7 +46,31 @@ let flag3 = true;
 let flag4 = true;
 let flag5 = true;
 
-window.onscroll = function() {
+fixedInstagramOne.addEventListener("mouseover", () => {
+    setTimeout(() => {
+        fixedInstagramOneP.innerText = "Telegram"
+    }, 950)
+})
+
+fixedInstagramOne.addEventListener("mouseleave", () => {
+    setTimeout(() => {
+        fixedInstagramOneP.innerText = ""
+    }, 950)
+})
+
+fixedWhatsappOne.addEventListener("mouseenter", () => {
+    setTimeout(() => {
+        fixedWhatsappOneP.innerText = "You Tube"
+    }, 1000)
+})
+
+fixedWhatsappOne.addEventListener("mouseleave", () => {
+    setTimeout(() => {
+        fixedWhatsappOneP.innerText = ""
+    }, 100)
+})
+
+window.onscroll = function () {
     let goToTopButton = document.getElementById('goToTopButton');
 
     if (window.scrollY > 1000) {

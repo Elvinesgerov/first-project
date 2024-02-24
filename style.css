@@ -11,11 +11,11 @@ body {
   box-sizing: border-box;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: #053e95;
 }
 
-.registration{
+.registration {
   position: absolute;
   background-color: white;
   left: 30%;
@@ -50,7 +50,7 @@ body {
   display: none;
 }
 
-.registration div{
+.registration div {
   margin-top: 25px;
   font-size: 18px;
   margin-left: 10px;
@@ -58,7 +58,7 @@ body {
   font-weight: 900;
 }
 
-.registration select{
+.registration select {
   width: 350px;
   height: 30px;
   border: #5098E1 solid 3px;
@@ -73,7 +73,7 @@ body {
   font-style: italic;
 }
 
-.registration input{
+.registration input {
   width: 350px;
   height: 30px;
   margin-top: 10px;
@@ -88,7 +88,7 @@ body {
   font-style: italic;
 }
 
-.ri-close-line{
+.ri-close-line {
   font-size: 36px;
   margin-top: -25px;
   margin-left: 46%;
@@ -112,6 +112,41 @@ body {
   width: 65px;
   height: 65px;
   padding: auto;
+}
+
+.fixed-whatsapp-one,
+.fixed-instagram-one {
+  background-color: #6f51e3;
+  width: 65px;
+  height: 65px;
+  padding-top: 10px;
+  border-radius: 10px;
+  display: flex;
+  gap: 30px;
+  font-size: 22px;
+  transition: 2s
+}
+
+.fixed-whatsapp-one:hover,
+.fixed-instagram-one:hover {
+  width: 210px;
+}
+
+.fixed-whatsapp-one:hover p,
+.fixed-instagram-one:hover p {
+  display: block;
+  opacity: 1;
+}
+
+.fixed-whatsapp-one p,
+.fixed-instagram-one p {
+  margin-top: 10px;
+  color: white;
+  display: none;
+}
+
+.fixed-instagram-one {
+  margin-top: 40px;
 }
 
 .fixed-instagram a::after,
@@ -173,6 +208,15 @@ body {
   z-index: 1;
 }
 
+.fixed-one {
+  position: fixed;
+  top: 50%;
+  left: -20px;
+  transform: translate(0, -50%);
+  padding: 20px;
+  z-index: 1;
+}
+
 .fixed .ri-whatsapp-line,
 .fixed .ri-instagram-line {
   font-size: 48px;
@@ -181,8 +225,21 @@ body {
   margin-top: 8px;
 }
 
+.fixed-one .ri-telegram-line {
+  font-size: 43px;
+  color: #6199fb;
+  margin-left: 8.5px;
+  margin-top: 8px;
+}
+
+#youtube {
+  font-size: 43px;
+  color: red;
+  margin-left: 8.5px;
+}
+
 .fixed-instagram {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .main {
@@ -934,7 +991,7 @@ iframe {
 }
 
 .the-end-box {
-  display:  flex;
+  display: flex;
   gap: 95px;
 }
 
@@ -1135,11 +1192,11 @@ iframe {
   color: #5292e1;
 }
 
-.mouse{
+.mouse {
   font-size: 50px;
   font-weight: 500;
   position: fixed;
-  top: 13%;
+  top: 85%;
   right: 15px;
   transform: translate(0, -50%);
   z-index: 1;
@@ -1152,7 +1209,7 @@ iframe {
   display: none;
 }
 
-.mouse-up{
+.mouse-up {
   font-size: 50px;
   font-weight: 500;
   position: fixed;
@@ -1168,16 +1225,19 @@ iframe {
   padding-top: 5px;
 }
 
-.ri-arrow-up-s-line, .ri-arrow-down-s-line {
+.ri-arrow-up-s-line,
+.ri-arrow-down-s-line {
   color: white;
   margin-left: -2px;
 }
 
-.mouse a, .mouse-up a {
+.mouse a,
+.mouse-up a {
   position: relative;
 }
 
-.mouse a::after, .mouse-up a::after {
+.mouse a::after,
+.mouse-up a::after {
   border: #053e95 solid 3.5px;
   border-radius: 9999px;
   box-sizing: border-box;
@@ -1194,15 +1254,18 @@ iframe {
   animation: pulse 1.4s linear infinite;
 }
 
-.mouse a:hover::after, .mouse-up a:hover::after{
+.mouse a:hover::after,
+.mouse-up a:hover::after {
   border: #5098E1 solid 3.5px;
 }
 
-.mouse a:hover::before, .mouse-up a:hover::before{
+.mouse a:hover::before,
+.mouse-up a:hover::before {
   border: #5098E1 solid 3.5px;
 }
 
-.mouse a::before, .mouse-up a::before {
+.mouse a::before,
+.mouse-up a::before {
   border: #053e95 solid 3.5px;
   border-radius: 9999px;
   box-sizing: border-box;
@@ -1219,30 +1282,32 @@ iframe {
   animation: pulse .8s linear infinite;
 }
 
-.mouse:hover, .mouse-up:hover{
+.mouse:hover,
+.mouse-up:hover {
   background-color: #5292e1;
 }
 
-.fixed-whatsapp:hover, .fixed-instagram:hover{
-  background-color:#053e95 ;
+.fixed-whatsapp:hover,
+.fixed-instagram:hover {
+  background-color: #053e95;
 }
 
-.fixed-instagram a:hover::after{
+.fixed-instagram a:hover::after {
   border: #053e95 solid 3.5px;
 }
 
-.fixed-whatsapp a:hover::after{
+.fixed-whatsapp a:hover::after {
   border: #053e95 solid 3.5px;
 }
 
-.fixed-whatsapp a:hover::before{
+.fixed-whatsapp a:hover::before {
   border: #053e95 solid 3.5px;
 }
 
-.fixed-instagram a:hover::before{
+.fixed-instagram a:hover::before {
   border: #053e95 solid 3.5px;
 }
 
-.fixed-instagram a:hover::before{
+.fixed-instagram a:hover::before {
   border: #053e95 solid 3.5px;
 }
