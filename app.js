@@ -46,6 +46,54 @@ let flag3 = true;
 let flag4 = true;
 let flag5 = true;
 
+function sendMail() {
+    (function () {
+        emailjs.init("nyMYn831UkKwlPBCW")
+    })();
+
+    let params = {
+        from_name: document.querySelector("#sendername").value,
+        subject: document.querySelector("#course").value,
+        email_id: document.querySelector("#to").value,
+        message: document.querySelector("#message").value,
+    }
+
+    let servicesID = "service_7y3yk4i";
+    let templateID = "template_z20a2dn";
+
+    emailjs.send(servicesID, templateID, params)
+        .then(res => {
+            if (select.value == "az"){
+                closeP.innerText = "Müraciətiniz qəbul edildi! Tezliklə geri dönüş olacaq."
+            } else if (select.value == "en"){
+                closeP.innerText = "Your application has been accepted! There will be a comeback soon."
+                closeP.style.color = "green"
+            }
+        })
+        .catch(error => {
+            alert('Bir hata oluştu: ' + error);
+        });
+}
+
+closeButton.addEventListener("click", ()=>{
+    closeP.style.display = "block"
+    closeInput.forEach(item =>{
+        if(item.value != ""){
+            sendMail();
+            closeP.style.color = "green"
+        } else if (item.value == ""){
+
+            if (select.value == "az"){
+                closeP.innerText = "Bütün alanları doldurun!"
+                closeP.style.color = "red"
+            } else if (select.value == "en"){
+                closeP.innerText = "Fill in all fields!"
+                closeP.style.color = "red"
+            }
+        }
+    })
+})
+
 fixedInstagramOne.addEventListener("mouseover", () => {
     setTimeout(() => {
         fixedInstagramOneP.innerText = "Telegram"
@@ -90,18 +138,6 @@ function goToTop() {
 }
 
 
-
-closeInput.forEach(item => {
-    closeButton.addEventListener("click", () => {
-        if (item.value != "") {
-            closeP.style.display = "block"
-        } else if (item.value == "") {
-            alert("Bütün alanlari doldurun")
-        }
-    })
-})
-
-
 registr.forEach(item => {
     item.addEventListener("click", () => {
         registration.style.display = "block"
@@ -135,7 +171,17 @@ registr.forEach(item => {
                     }
                 })
                 closeButton.innerText = "Send"
-                closeP.innerText = "Your application has been accepted! There will be a comeback soon."
+
+                closeInput.forEach(item =>{
+                    if (item.value != ""){
+                        closeP.innerText = "Your application has been accepted! There will be a comeback soon."
+                        closeP.style.color = "green"
+                    } else if  (item.value == ""){
+                        closeP.innerText = "Fill in all fields!"
+                        closeP.style.color = "red"
+                    }
+                })
+
                 closeP.style.marginLeft = "93px"
             } else if (select.value == "az") {
                 closeH2.innerText = "Sizinlə əlaqəyə keçməyimiz üçün məlumatlarınızı daxil edin:"
@@ -166,7 +212,15 @@ registr.forEach(item => {
                 })
 
                 closeButton.innerText = "Göndər"
-                closeP.innerText = "Müraciətiniz qəbul edildi! Tezliklə geri dönüş olacaq."
+                closeInput.forEach(item =>{
+                    if (item.value != ""){
+                        closeP.innerText = "Müraciətiniz qəbul edildi! Tezliklə geri dönüş olacaq."
+                        closeP.style.color = "grean"
+                    } else if  (item.value == ""){
+                        closeP.innerText = "Bütün alanları doldurun!"
+                        closeP.style.color = "red"
+                    }
+                })
                 closeP.style.marginLeft = "93px"
             }
 
@@ -174,6 +228,9 @@ registr.forEach(item => {
 
         close1.addEventListener('click', () => {
             registration.style.display = "none"
+            closeInput.forEach(item => {
+                item.value = ""
+            })
         })
 
         if (select.value == "en") {
