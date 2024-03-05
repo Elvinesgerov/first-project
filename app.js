@@ -46,6 +46,65 @@ let flag3 = true;
 let flag4 = true;
 let flag5 = true;
 
+function sendAbune() {
+    (function () {
+        emailjs.init("nyMYn831UkKwlPBCW")
+    })();
+
+    let params = {
+        email_id: document.querySelector("#abune").value,
+    }
+
+    let servicesID = "service_7y3yk4i";
+    let templateID = "template_z20a2dn";
+
+    emailjs.send(servicesID, templateID, params)
+        .then(res => {
+            if (select.value == "az"){
+                subscribeMessage.innerText = "Uğurla Abunə Olundu!"
+                subscribeMessage.style.color = "green"
+                setTimeout(()=>{
+                    subscribeMessage.style.display = "none"
+                },2000)
+            } else if (select.value == "en"){
+                subscribeMessage.innerText = "Subscribed Successfully!"
+                subscribeMessage.style.color = "green"
+                setTimeout(()=>{
+                    subscribeMessage.style.display = "none"
+                },2000)
+            }
+        })
+        .catch(error => {
+            alert('Bir hata oluştu: ' + error);
+        });
+}
+
+subscribeButton.addEventListener("click", ()=>{
+    if(subscribeInput.value != ""){
+        sendAbune()
+    } else if (subscribeInput.value == ""){
+            subscribeMessage.style.display = "block"
+            if(select.value == "az"){
+                subscribeMessage.innerText = "Alanı doldurun! "
+                subscribeMessage.style.color = "red"
+            } else if (select.value == "en"){
+                subscribeMessage.innerText = "Fill in the field!"
+                subscribeMessage.style.color = "red"
+            }
+            setTimeout(()=>{
+                subscribeMessage.style.display = "none"
+            }, 2000)
+    }
+})
+
+// closeButton.addEventListener("click", ()=>{
+//     closeButton.style.backgroundColor = "#053e95"
+// })
+
+// closeButton.addEventListener("mouseleave", ()=>{
+//     closeButton.style.backgroundColor = "#00d68f"
+// })
+
 function sendMail() {
     (function () {
         emailjs.init("nyMYn831UkKwlPBCW")
@@ -77,6 +136,9 @@ function sendMail() {
 
 closeButton.addEventListener("click", ()=>{
     closeP.style.display = "block"
+    setTimeout(()=>{
+        closeP.style.display = "none"
+    }, 3500)
     closeInput.forEach(item =>{
         if(item.value != ""){
             sendMail();
@@ -301,11 +363,6 @@ registr.forEach(item => {
 subscribeButton.addEventListener("click", () => {
     if (subscribeInput.value != "") {
         subscribeMessage.style.display = "block"
-    } else if (subscribeInput.value == "") {
-        alert("Emailinizi daxil edin!")
-    } else {
-        alert("Emaili duzgun daxil edin!")
-
     }
 })
 

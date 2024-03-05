@@ -18,7 +18,7 @@ body {
 .registration {
   position: absolute;
   background-color: white;
-  left: 30%;
+  left: 24%;
   top: 120px;
   width: 800px;
   height: 700px;
@@ -28,6 +28,11 @@ body {
   font-weight: 900;
   border-radius: 20px;
   display: none;
+}
+
+.close div button:hover{
+  background-color: #053e95;
+  border: 2px solid #053e95;
 }
 
 .close div button {
@@ -116,7 +121,7 @@ body {
 
 .fixed-whatsapp-one,
 .fixed-instagram-one {
-  background-color: #6f51e3;
+  background-color: blue;
   width: 65px;
   height: 65px;
   padding-top: 10px;
@@ -969,12 +974,16 @@ iframe {
   border-radius: 15px;
 }
 
+.subscribe button:hover{
+  background-color: #00d68f;
+}
+
 .subscribe-message {
   margin-top: 30px;
   font-size: 25px;
   margin-left: 28%;
   font-weight: 900;
-  color: #5098E1;
+  color: green;
   font-style: italic;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   display: none;
