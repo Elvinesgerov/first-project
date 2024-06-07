@@ -264,6 +264,8 @@ body {
   border-radius: 50%;
 }
 
+
+
 .logo {
   display: flex;
   gap: 20px;
@@ -1118,6 +1120,10 @@ iframe {
   left: 415px;
   border-radius: 15px;
   display: none;
+}
+
+.hidden-course a {
+  color: black;
 }
 
 .digital-technology {

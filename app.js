@@ -97,14 +97,6 @@ subscribeButton.addEventListener("click", ()=>{
     }
 })
 
-// closeButton.addEventListener("click", ()=>{
-//     closeButton.style.backgroundColor = "#053e95"
-// })
-
-// closeButton.addEventListener("mouseleave", ()=>{
-//     closeButton.style.backgroundColor = "#00d68f"
-// })
-
 function sendMail() {
     (function () {
         emailjs.init("nyMYn831UkKwlPBCW")
